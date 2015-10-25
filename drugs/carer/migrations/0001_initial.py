@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('surname', models.CharField(max_length=30)),
                 ('substance', models.CharField(max_length=30)),
                 ('lastMeeting', models.DateField()),
-                ('checkedIn', models.BooleanField()),
+                ('checked_in', models.BooleanField()),
             ],
         ),
     ]
