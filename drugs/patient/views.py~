@@ -18,8 +18,7 @@ def register(request):
         "title": title,
         "form": form
     }
-    return render(request,"patient/login.html",context)
-	
+    return render(request,"patient/register.html",context)
 
 
 

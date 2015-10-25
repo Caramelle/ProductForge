@@ -8,8 +8,12 @@ from .forms import RegisterForm
 # Create your views here.
 
 def home(request):
+    title='Home'
+    context = {
+        "title": title
+    }
     template = loader.get_template('patient/patient_home.html')
-    return HttpResponse(template.render())
+    return render(request, "patient/patient_home.html", context)
 
 def register(request):
     form = RegisterForm()
@@ -18,8 +22,7 @@ def register(request):
         "title": title,
         "form": form
     }
-    return render(request,"patient/login.html",context)
-	
+    return render(request,"patient/register.html",context)
 
 
 
