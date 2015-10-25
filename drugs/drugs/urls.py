@@ -17,7 +17,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-	url(r'^admin/', include(admin.site.urls)),url(r'^homepage/', include('homepage.urls', namespace="homepage")),
     url(r'^admin/', include(admin.site.urls)),url(r'^carer/', include('carer.urls', namespace="carer")), 
     url(r'^patient/', include('patient.urls',namespace="patient"))
 
