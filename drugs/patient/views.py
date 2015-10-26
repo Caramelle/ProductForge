@@ -12,11 +12,10 @@ def home(request):
     context = {
         "title": title
     }
-    template = loader.get_template('patient/patient_home.html')
     return render(request, "patient/patient_home.html", context)
 
 def register(request):
-    form = RegisterForm()
+    form = RegisterForm(request.POST)
     title='Register'
     context = {
         "title": title,
